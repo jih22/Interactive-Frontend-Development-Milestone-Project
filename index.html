@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+        <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 class="game-title">Memory Game</h1>
+    <div class="overlay-text visible">
+    Click to Play
+    </div>
+    
+    <div id="game-over" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    
+    <div id="win" class="overlay-text">
+    VICTORY
+    <span class="overlay-text-small">Play Again</span>
+    </div>
+
+    <div class="memory-container">
+        <div class="memory-info-container">
+            <div class="memory-info">
+                Time <span id="time">100</span>
+            </div>
+            <div class="memory-info">
+                Flips <span id="flip">0</span>
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween1.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween4.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face"> 
+                <img class="halloween" src="Assets/Images/halloween2.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">    
+                <img class="halloween" src="Assets/Images/halloween6.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween4.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween2.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween6.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face"> 
+                <img class="halloween" src="Assets/Images/halloween1.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween3.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">   
+                <img class="halloween" src="Assets/Images/halloween5.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                 <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face"> 
+                <img class="halloween" src="Assets/Images/halloween3.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                 <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween8.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">    
+                <img class="halloween" src="Assets/Images/halloween5.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween8.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">    
+                <img class="halloween" src="Assets/Images/halloween7.png" alt="halloween">
+            </div>
+        </div>
+        <div class="memory-card">
+            <div class="memory-card-back memory-card-face">
+                <img class="ghost ghost-top-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-top-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-left" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="ghost ghost-bottom-right" src="Assets/Images/ghost.png" alt="ghost">
+                <img class="cauldron" src="Assets/Images/cauldron.png" alt="cauldron">
+            </div>
+            <div class="memory-card-front memory-card-face">
+                <img class="halloween" src="Assets/Images/halloween7.png" alt="halloween">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
