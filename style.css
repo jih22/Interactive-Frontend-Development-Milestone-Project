@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sansita+Swashed:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    cursor: url("Assets/Cursor/witch.cur.png"), auto;
     min-height: 100vh;
 }
 
 body {
     margin: 0;
-    background: radial-gradient(rgb(248, 195, 244), rgb(55, 28, 61));
+    background: url('Assets/Images/Snowflakes.png');
 }
 
 /* ----- Start Page ------ */
 
 .game-title {
     color: rgb(245, 229, 237);
-    font-family: 'Creepster', cursive;
+    font-family: 'Sansita Swashed', cursive;
     font-size: 6em;
     text-align: center;
 }
 
+
 .memory-info {
-    font-family: 'Creepster', cursive;
-    color: rgb(108, 42, 141);
+    font-family: 'Sansita Swashed', cursive;
+    color: rgb(255, 0, 0);
     font-size: 3em;
 }
 
@@ -45,7 +44,6 @@ body {
     perspective: 500px;
 }
 
-
 /* ----- Overlay -----*/
 
 .overlay-text {
@@ -58,8 +56,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color: rgb(80, 26, 109);
-    font-family: 'Creepster', cursive;
+    color: rgb(rgb(255, 0, 0), rgb(3, 122, 29), rgb(250, 227, 16));
+    font-family: 'Sansita Swashed', cursive;
 }
 
 .overlay-text.visible {
@@ -83,6 +81,7 @@ body {
     font-size: .4em;
 }
 
+
 /* ----- Card ------ */
 
 .memory-card {
@@ -91,13 +90,9 @@ body {
     width: 150px;
 }
 
-.memory-card {
-    cursor: url("Assets/Cursor/witch.cur.png"), auto;
-}
-
 .memory-card-back {
-     background-color: black;
-     border-color: rgba(201, 75, 180, 0.829)
+     background-color: rgb(3, 122, 29);
+     border-color: rgba(248, 10, 10, 0.829)
 }
 
 .memory-card-face {
@@ -123,58 +118,41 @@ body {
     transform: rotateY(0);
 }
 
-
-.ghost {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    transition: all 1s ease-in-out;
-}
-
-.memory-card-face:hover .ghost {
-    width: 40px;
-    height: 40px;
-}
-
-.ghost-top-left {
-    top: 0;
-    left: 0;
-}
-
-.ghost-top-right {
-    transform: scaleX(-1);
-    top: 0;
-    right: 0;
-}
-
-.ghost-bottom-left {
-    bottom: 0;
-    left: 0;
-}
-
-.ghost-bottom-right {
-    transform: scaleX(-1);
-    bottom: 0;
-    right: 0;
-}
-
-.cauldron {
+.bell {
     position: absolute;
     display: flex;
     width: 100px;
-    height: 100px;
 }
 
+.bell:hover {
+  animation: dance 1s linear infinite 100ms;
+  cursor: pointer;
+}
 
-/* ----- Memory-Card-Front ------ */
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+    
 
 .memory-card-front {
-    background-color: #ca8eca;
-    border-color: rgba(250, 244, 244, 0.801);
+    background-color: #399422;
+    border-color: rgba(6, 71, 0, 0.801);
     transform: rotateY(180deg);
 }
 
-.halloween {
+.memory-card-front:hover .christmas {
+    transform: scale(1);
+}
+
+.christmas {
     position: relative;
     display: flex;
     width: 110px;
@@ -183,13 +161,9 @@ body {
     transition: all 1s ease-in-out;
 }
 
-.memory-card-front:hover .halloween {
-    transform: scale(1);
-}
-
 /* ----- Matched ------ */
 
-.memory-card.matched .halloween {
+.memory-card.matched .christmas {
     animation: dance 1s linear infinite 600ms;
 }
 
